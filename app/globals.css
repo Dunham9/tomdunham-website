@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #b21818;
+  color: #fcfcfa;
+}
+
+body{
+    font-family:var(--font-body);
+    background:#f7f4ef;
+    color:#111;
+}
+
+.font-serif{
+    font-family:var(--font-display);
+}
+html {
+  scroll-behavior: smooth;
+}
