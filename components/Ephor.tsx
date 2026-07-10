@@ -10,7 +10,7 @@ export default function Ephor() {
         </p>
 
         <p className="text-[16px] leading-8 text-black/65">
-          Independent production company developing character-driven stories
+          Ephor Pictures is an independent production company developing character-driven stories
           across film and television.
         </p>
 
