@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/branding/tom-dunham-logo.png",
+        url: "/branding/og-image.png",
         width: 1200,
         height: 630,
         alt: "Tom Dunham",
