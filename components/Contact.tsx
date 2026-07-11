@@ -17,7 +17,7 @@ export default function Contact() {
         <div className="mx-auto mt-8 h-px w-16 bg-[#b21818]/60" />
 
         <a
-          href="mailto:tomdunham8@gmail.com"
+          href="mailto:td@tomdunham.com"
           className="mt-8 inline-block text-base text-black/70 underline decoration-black/10 underline-offset-4 transition hover:text-[#b21818] hover:decoration-[#b21818]"
         >
           td@tomdunham.com

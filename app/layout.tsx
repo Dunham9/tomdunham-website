@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "branding/td-logo.png",
-    shortcut: "branding/td-logo.png",
-    apple: "branding/td-logo.png",
+    icon: "/branding/td-logo.png",
+    shortcut: "/branding/td-logo.png",
+    apple: "/branding/td-logo.png",
   },
 
   openGraph: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/branding/Tom Dunham Logo_Brackets_Black.png",
+        url: "/branding/tom-dunham-logo.png",
         width: 1200,
         height: 630,
         alt: "Tom Dunham",
@@ -56,8 +56,37 @@ export const metadata: Metadata = {
     title: "Tom Dunham | Writer & Director",
     description:
       "Writer, director and development producer working across film and television.",
-    images: ["/branding/Tom Dunham Logo_Brackets_Black.png"],
+    images: ["/branding/tom-dunham-logo.png"],
   },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://tomdunham.com/#person",
+  name: "Tom Dunham",
+  url: "https://tomdunham.com",
+  image: "https://tomdunham.com/headshot.jpg",
+  jobTitle: [
+    "Writer",
+    "Director",
+    "Development Producer",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Ephor Pictures",
+    url: "https://www.ephorpictures.com",
+  },
+  sameAs: [
+    "https://www.imdb.com/name/YOUR_IMDB_ID/",
+    "https://www.instagram.com/YOUR_INSTAGRAM/",
+  ],
+  knowsAbout: [
+    "Screenwriting",
+    "Film directing",
+    "Film development",
+    "Television development",
+  ],
 };
 
 export default function RootLayout({
@@ -67,7 +96,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${instrument.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
+          }}
+        />
+      </body>
     </html>
   );
 }
